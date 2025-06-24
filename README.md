@@ -101,10 +101,10 @@ Click the **Upload** button in the Arduino IDE with the correct COM port selecte
 
 ## Future Roadmap
 
-* [ ] Mobile companion app — real-time alerts and remote control
-* [ ] AI crop tuning — machine-learning recipes for light, water and nutrients
-* [ ] Weather integration — adapt set-points to live forecasts
-* [ ] Urban farming kit — compact version for balconies and rooftops
+*  Mobile companion app — real-time alerts and remote control
+*  AI crop tuning — machine-learning recipes for light, water and nutrients
+*  Weather integration — adapt set-points to live forecasts
+*  Urban farming kit — compact version for balconies and rooftops
 
 ---
 
