@@ -14,6 +14,7 @@ float distance1, distance2;
 
 bool relayState = false;
 
+//This function runs only once and intialises everything.
 void setup() {
   pinMode(trig1, OUTPUT); pinMode(echo1, INPUT);
   pinMode(trig2, OUTPUT); pinMode(echo2, INPUT);
@@ -22,6 +23,7 @@ void setup() {
   Serial.begin(9600);
 }
 
+//Ultrasonic Sensor Reading Function
 float readDistance(int trig, int echo) {
   digitalWrite(trig, LOW);
   delayMicroseconds(2);
@@ -31,12 +33,13 @@ float readDistance(int trig, int echo) {
   return pulseIn(echo, HIGH) * 0.034 / 2;
 }
 
+// This function is called up again and again
 void loop() {
   distance1 = readDistance(trig1, echo1);
   distance2 = readDistance(trig2, echo2);
 
-  // Serial.print("Main Sensor: "); Serial.print(distance1); Serial.print(" cm, ");
-  // Serial.print("Emergency Sensor: "); Serial.println(distance2);
+   Serial.print("Main Sensor: "); Serial.print(distance1); Serial.print(" cm, ");
+   Serial.print("Emergency Sensor: "); Serial.println(distance2);
 
   if (distance2 >= 9.0 ) {
     digitalWrite(relayPin, LOW);
